@@ -14,11 +14,11 @@
       <th>introduction</th>
       <th><%= user.introduction %></th>
     </tr>
-
   </tbody>
 </table>
-<% if @user.id == current_user.id %>
-      <div class="mt-auto">
-      <p><%= link_to "プロフィール編集", edit_user_path(@user), class:"text-dark" %></p>
-      </div>
+ <%# <% if user.id == current_user.id %> 
+<th colspan="2">
+  <%= link_to edit_user_path(current_user), class:"btn btn-default btn-block" do %>
+  <i class="fas fa-user-cog"></i></span>
   <% end %>
+</th>
